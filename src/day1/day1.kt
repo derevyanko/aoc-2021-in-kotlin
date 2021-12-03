@@ -2,7 +2,7 @@ fun main() {
     partTwo()
 }
 
-fun partOne() {
+private fun partOne() {
     val input = readInput("/day1/input").map { it.toInt() }
 
     val answer = greaterThanPreviousCount(input)
@@ -10,7 +10,7 @@ fun partOne() {
     println(answer)
 }
 
-fun partTwo() {
+private fun partTwo() {
     val input = readInput("/day1/input").map { it.toInt() }
     val input_size = input.size
 
@@ -23,7 +23,7 @@ fun partTwo() {
     println(answer)
 }
 
-fun greaterThanPreviousCount(input: List<Int>): Int {
+private fun greaterThanPreviousCount(input: List<Int>): Int {
     val booleanList = input.indices.map { index ->
         if (index == 0) false
         else input[index - 1] < input[index]

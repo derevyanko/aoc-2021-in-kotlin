@@ -1,11 +1,8 @@
-package day2
-import readInput
-
 fun main() {
     partTwo()
 }
 
-fun partOne() {
+private fun partOne() {
     val input = readInput("day2/input").map { it.split(" ") }
 
     val forwardSum = input.filter { it[0] == "forward" }.sumOf { it[1].toInt() }
@@ -19,7 +16,7 @@ fun partOne() {
     println(answer)
 }
 
-fun partTwo() {
+private fun partTwo() {
     val input = readInput("day2/input").map { it.split(" ").run { Pair(this[0], this[1].toInt()) } }
 
     var (aim, forward, depth) = listOf(0, 0, 0)
